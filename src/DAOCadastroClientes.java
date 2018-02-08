@@ -9,7 +9,7 @@ public class DAOCadastroClientes {
         c = ConnectionFactory.getConnection();
     }
 
-    public void adicionar(Cliente cliente){
+    public void adicionar(CadastroClientes cadastroClientes){
         PreparedStatement ps = null;
         try{
 
