@@ -15,7 +15,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="1"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="9cebb" class="javax.swing.JTextField" binding="datanasc">
@@ -25,7 +25,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="1"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="80f9b" class="javax.swing.JTextField" binding="cpf">
@@ -35,7 +35,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="1"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="10950" class="javax.swing.JLabel">
@@ -110,7 +110,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="1"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="8ecd2" class="javax.swing.JTextField" binding="endereco">
@@ -120,7 +120,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="1"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="b2885" class="javax.swing.JTextField" binding="cidade">
@@ -130,7 +130,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="1"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="19197" class="javax.swing.JTextField" binding="cep">
@@ -140,7 +140,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="1"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="f94d4" class="javax.swing.JButton" binding="cadastrarButton" default-binding="true">
@@ -157,33 +157,33 @@
         </constraints>
         <properties>
           <model>
-            <item value="Acre "/>
-            <item value="Alagoas "/>
-            <item value="Amapá "/>
-            <item value="Amazonas &#9; &#9; "/>
-            <item value="Bahia &#9; "/>
-            <item value="Ceará &#9; "/>
-            <item value="Distrito Federal &#9; &#9; "/>
-            <item value="Espírito Santo &#9; "/>
-            <item value="Goiás &#9; "/>
-            <item value="Maranhão &#9; "/>
-            <item value="Mato Grosso &#9; "/>
-            <item value="Mato Grosso do Sul &#9;&#9; "/>
-            <item value="Minas Gerais &#9;"/>
-            <item value="Pará &#9;&#9; "/>
-            <item value="Paraíba &#9; "/>
-            <item value="Paraná &#9;&#9; "/>
-            <item value="Pernambuco &#9; &#9; "/>
-            <item value="Piauí &#9;&#9; "/>
-            <item value="Rio de Janeiro &#9;&#9; "/>
-            <item value="Rio Grande do Norte &#9;&#9; "/>
-            <item value="Rio Grande do Sul &#9; &#9; "/>
-            <item value="Rondônia &#9;&#9; "/>
-            <item value="Roraima &#9;&#9; "/>
-            <item value="Santa Catarina &#9;&#9; "/>
-            <item value="São Paulo &#9; &#9; "/>
-            <item value="Sergipe &#9;&#9; "/>
-            <item value="Tocantins &#9;"/>
+            <item value="Acre"/>
+            <item value="Alagoas"/>
+            <item value="Amapá"/>
+            <item value="Amazonas"/>
+            <item value="Bahia"/>
+            <item value="Ceará"/>
+            <item value="Distrito Federal"/>
+            <item value="Espírito Santo"/>
+            <item value="Goiás"/>
+            <item value="Maranhão"/>
+            <item value="Mato Grosso"/>
+            <item value="Mato Grosso do Sul"/>
+            <item value="Minas Gerais"/>
+            <item value="Pará"/>
+            <item value="Paraíba"/>
+            <item value="Paraná"/>
+            <item value="Pernambuco"/>
+            <item value="Piauí"/>
+            <item value="Rio de Janeiro"/>
+            <item value="Rio Grande do Norte"/>
+            <item value="Rio Grande do Sul"/>
+            <item value="Rondônia"/>
+            <item value="Roraima"/>
+            <item value="Santa Catarina"/>
+            <item value="São Paulo"/>
+            <item value="Sergipe"/>
+            <item value="Tocantins"/>
           </model>
         </properties>
       </component>

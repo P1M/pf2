@@ -1,5 +1,6 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public final class ConnectionFactory {
@@ -16,9 +17,11 @@ public final class ConnectionFactory {
         Class.forName("com.mysql.cj.jdbc.Driver");
 
         // Especifica uma URL com informações para acessar o Banco de Dados (ETAPA 3)
-        String url = "jdbc:mysql://localhost:3306/"; // Nome da base de dados
+        String url = "jdbc:mysql://localhost:3306/db_cabaret"; // Nome da base de dados
         String user = "root"; // nome do usuário do MySQL
         String password = "123pimpim"; // senha do MySQL
+
+
 
         // Abre uma conexão com o Banco de Dados (ETAPA 4)
         connection = DriverManager.getConnection(url, user, password);

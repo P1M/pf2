@@ -9,19 +9,19 @@ public class DAOCadastroClientes {
         c = ConnectionFactory.getConnection();
     }
 
-    public void adicionar(CadastraClientes cadastraClientes){
+    public void adicionar(Clientes clientes1) throws SQLException, ClassNotFoundException {
         PreparedStatement ps = null;
         try{
 
             ps = c.prepareStatement("INSERT INTO CadastroClientes(Nome, DataNasc, Cpf, Telefone, Endereco, Cidade, Estado, Cep) VALUES (?,?,?,?,?,?,?,?);");
-           ps.setString(1,cadastraClientes.getNome());
-            ps.setString(2,cadastraClientes.getDatanasc());
-            ps.setString(3,cadastraClientes.getCpf());
-            ps.setString(4,cadastraClientes.getTelefone());
-            ps.setString(5,cadastraClientes.getEndereco());
-            ps.setString(6,cadastraClientes.getCidade());
-            ps.setString(7,cadastraClientes.getEstado());
-            ps.setString(8,cadastraClientes.getCep());
+           ps.setString(1,clientes1.nome);
+            ps.setString(2,clientes1.datanasc);
+            ps.setString(3,clientes1.cpf);
+            ps.setString(4,clientes1.telefone);
+            ps.setString(5,clientes1.endereco);
+            ps.setString(6,clientes1.cidade);
+            ps.setString(7,clientes1.estado);
+            ps.setString(8,clientes1.cep);
 
 
 

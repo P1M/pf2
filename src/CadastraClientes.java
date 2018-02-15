@@ -2,75 +2,57 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class CadastraClientes {
-    private JTextField nome;
-    private JTextField datanasc;
-    private JTextField cpf;
-    private JTextField telefone;
-    private JTextField endereco;
-    private JTextField cidade;
-    private JTextField cep;
-    private JButton cadastrarButton;
-    private JComboBox estado;
-    private JPanel CadastrarClientes;
+    public JTextField nome;
+    public JTextField datanasc;
+    public JTextField cpf;
+    public JTextField telefone;
+    public JTextField endereco;
+    public JTextField cidade;
+    public JTextField cep;
+    public JButton cadastrarButton;
+    public JComboBox estado;
+    public JPanel CadastrarClientes;
 
 
-    public CadastraClientes() {
+    public CadastraClientes() throws SQLException, ClassNotFoundException {
+        DAOCadastroClientes daoCadastroClientes = new DAOCadastroClientes();
+
+
         cadastrarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //DAOCadastroClientes.
+                try {
+
+                    Clientes clientes1 = new Clientes();
+                    clientes1.nome = nome.getText();
+                    clientes1.datanasc = datanasc.getText();
+                    clientes1.cpf = cpf.getText();
+                    clientes1.telefone = telefone.getText();
+                    clientes1.endereco = endereco.getText();
+                    clientes1.cidade = cidade.getText();
+                    clientes1.estado = estado.getModel().getSelectedItem().toString();
+                    clientes1.cep = cep.getText();
+                    //System.out.println(nome.getText());
+
+                    daoCadastroClientes.adicionar(clientes1);
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                } catch (ClassNotFoundException e1) {
+                    e1.printStackTrace();
+                }
             }
         });
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
         JFrame frame = new JFrame("CadastraClientes");
         frame.setContentPane(new CadastraClientes().CadastrarClientes);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-    }
-
-    public String getNome() {
-        return nome.getText();
-    }
-
-    public String getDatanasc() {
-        return datanasc.getText();
-    }
-
-    public String getCpf() {
-        return cpf.getText();
-    }
-
-    public String getTelefone() {
-        return telefone.getText();
-    }
-
-    public String getEndereco() {
-        return endereco.getText();
-    }
-
-    public String getCidade() {
-        return cidade.getText();
-    }
-
-    public String getCep() {
-        return cep.getText();
-    }
-
-    public JButton getCadastrarButton() {
-        return cadastrarButton;
-    }
-
-    public String getEstado() {
-        return estado.getSelectedItem().toString();
-    }
-
-    public JPanel getCadastrarClientes() {
-        return CadastrarClientes;
     }
 
     {
@@ -94,7 +76,7 @@ public class CadastraClientes {
         nome.setText("");
         CadastrarClientes.add(nome, new com.intellij.uiDesigner.core.GridConstraints(0, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         datanasc = new JTextField();
-        datanasc.setText(" ");
+        datanasc.setText("");
         CadastrarClientes.add(datanasc, new com.intellij.uiDesigner.core.GridConstraints(1, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         cpf = new JTextField();
         cpf.setText("");
@@ -133,6 +115,7 @@ public class CadastraClientes {
         cidade.setText("");
         CadastrarClientes.add(cidade, new com.intellij.uiDesigner.core.GridConstraints(5, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         cep = new JTextField();
+        cep.setText("");
         CadastrarClientes.add(cep, new com.intellij.uiDesigner.core.GridConstraints(7, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         cadastrarButton = new JButton();
         cadastrarButton.setText("Cadastrar");
@@ -177,4 +160,13 @@ public class CadastraClientes {
     public JComponent $$$getRootComponent$$$() {
         return CadastrarClientes;
     }
+
+
+    private class GridConstraints {
+        public GridConstraints(int i, int i1, int i2, int i3, Object p4, Object p5, Object p6, Object p7, Object o, Object o1, Object o2, int i4, boolean b) {
+        }
+    }
+
+
 }
+
