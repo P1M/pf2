@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost [2]">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="db_cabaret">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="phpmyadmin"/>
+    <schema id="7" parent="1" name="portal"/>
+    <schema id="8" parent="1" name="prog3"/>
+    <schema id="9" parent="1" name="sys"/>
+    <table id="10" parent="2" name="CadastroClientes"/>
+    <table id="11" parent="2" name="Funcionarios"/>
+    <table id="12" parent="2" name="Produtos"/>
+    <table id="13" parent="2" name="Quartos"/>
+    <table id="14" parent="2" name="Servicos"/>
+    <column id="15" parent="10" name="Nome">
+      <Position>1</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="16" parent="10" name="DataNasc">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="17" parent="10" name="Cpf">
+      <Position>3</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="10" name="Telefone">
+      <Position>4</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="19" parent="10" name="Endereco">
+      <Position>5</Position>
+      <DataType>varchar(70)|0</DataType>
+    </column>
+    <column id="20" parent="10" name="Cidade">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="21" parent="10" name="Estado">
+      <Position>7</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="22" parent="10" name="Cep">
+      <Position>8</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="23" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Cpf</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="24" parent="11" name="Cargo">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="25" parent="11" name="Nome">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="26" parent="11" name="DataNasc">
+      <Position>3</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="27" parent="11" name="Genero">
+      <Position>4</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="28" parent="11" name="Salario">
+      <Position>5</Position>
+      <DataType>int(10)|0</DataType>
+    </column>
+    <column id="29" parent="11" name="DataAdmiss">
+      <Position>6</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="30" parent="11" name="Cpf_Func">
+      <Position>7</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="31" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Cpf_Func</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="32" parent="12" name="idProdutos">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="12" name="Bebidas">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="34" parent="12" name="Camisinha">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="35" parent="12" name="Cigarros">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="36" parent="12" name="Preco">
+      <Position>5</Position>
+      <DataType>int(5)|0</DataType>
+    </column>
+    <column id="37" parent="12" name="Quantidade">
+      <Position>6</Position>
+      <DataType>int(5)|0</DataType>
+    </column>
+    <key id="38" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idProdutos</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="39" parent="13" name="idQuartos">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="13" name="Tipo_Quarto">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="41" parent="13" name="Preco_Quarto">
+      <Position>3</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="42" parent="13" name="Hr_Entrada">
+      <Position>4</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="13" name="Hr_Saida">
+      <Position>5</Position>
+      <DataType>varchar(6)|0</DataType>
+    </column>
+    <column id="44" parent="13" name="Data">
+      <Position>6</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="13" name="Produtos_idProdutos">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="13" name="Servicos_idServicos">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="47" parent="13" name="fk_Quartos_Produtos1_idx">
+      <ColNames>Produtos_idProdutos</ColNames>
+    </index>
+    <index id="48" parent="13" name="fk_Quartos_Servicos1_idx">
+      <ColNames>Servicos_idServicos</ColNames>
+    </index>
+    <key id="49" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idQuartos
+Hr_Entrada
+Data</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="50" parent="13" name="fk_Quartos_Produtos1">
+      <ColNames>Produtos_idProdutos</ColNames>
+      <RefSchemaName>db_cabaret</RefSchemaName>
+      <RefTableName>Produtos</RefTableName>
+      <RefColNames>idProdutos</RefColNames>
+    </foreign-key>
+    <foreign-key id="51" parent="13" name="fk_Quartos_Servicos1">
+      <ColNames>Servicos_idServicos</ColNames>
+      <RefSchemaName>db_cabaret</RefSchemaName>
+      <RefTableName>Servicos</RefTableName>
+      <RefColNames>idServicos</RefColNames>
+    </foreign-key>
+    <column id="52" parent="14" name="idServicos">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="14" name="Massagem">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="54" parent="14" name="Danca">
+      <Position>3</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="55" parent="14" name="Completo">
+      <Position>4</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="56" parent="14" name="Preco">
+      <Position>5</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="57" parent="14" name="Funcionarios_Cpf_Func">
+      <Position>6</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="58" parent="14" name="fk_Servicos_Funcionarios1_idx">
+      <ColNames>Funcionarios_Cpf_Func</ColNames>
+    </index>
+    <key id="59" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idServicos</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="60" parent="14" name="fk_Servicos_Funcionarios1">
+      <ColNames>Funcionarios_Cpf_Func</ColNames>
+      <RefSchemaName>db_cabaret</RefSchemaName>
+      <RefTableName>Funcionarios</RefTableName>
+      <RefColNames>Cpf_Func</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
